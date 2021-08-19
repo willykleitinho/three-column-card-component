@@ -1,0 +1,108 @@
+:root {
+  --font-size: 15px;
+  --font-family-1: 'Lexend Deca', sans-serif;
+  --font-weight-1: 400;
+  --font-family-2: 'Big Shoulders Display', cursive;
+  --font-weight-2: 700;
+
+  --clr-pgph: hsla(0, 0%, 100%, 0.75);
+  --clr-hdng: hsl(0, 0%, 95%);
+}
+
+div, h1, p, body, html, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { background: var(--clr-hdng) }
+
+h1 {
+  font-size: calc(var(--font-size) * 2.5);
+  font-family: var(--font-family-2);
+  font-weight: var(--font-weight-2);
+  text-transform: uppercase;
+  color: var(--clr-hdng);
+  padding: 3rem 0;
+}
+
+p, a {
+  font-size: var(--font-size);
+  font-family: var(--font-family-1);
+  font-weight: var(--font-weight-1);
+}
+
+p, .button:hover, .button:active {
+  color: var(--clr-pgph);
+}
+
+p {
+  padding-bottom: 5rem;
+  line-height: 25px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 950px;
+  max-width: calc(100% - 3rem);
+  margin: 5rem 1.5rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@media (min-width: 700px) {
+  .flex-container {
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+}
+
+.item {
+  flex-basis: 100%;
+  padding: 3.3rem;
+}
+
+
+.box-1 {
+  background: hsl(31, 77%, 52%);
+  color: hsl(31, 77%, 52%);
+}
+
+.box-2 {
+  background: hsl(184, 100%, 22%);
+  color: hsl(184, 100%, 22%);
+}
+
+.box-3 {
+  background: hsl(179, 100%, 13%);
+  color: hsl(179, 100%, 13%);
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: inherit;
+  background: var(--clr-hdng);
+  border: 2px solid rgba(255,255,255,0);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: 100ms;
+}
+
+.button:hover, .button:active {
+  color: var(--clr-hdng);
+  background: transparent;
+  border: 2px solid var(--clr-hdng);
+}
+
+.attribution {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 11px; text-align: center;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
